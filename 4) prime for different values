@@ -33,16 +33,16 @@ int main()
 			cout << a[i] << ", ";
 
 		int s = 0;
-		int j=0;
 		for (int i = 0; i < n; i++)
 		{
 			if (IsSimpleNumber(a[i]))
 			{
-				for (int j = 0; j < i; j++)
+				int j=0;
+				for ( ; j < i; j++)
 				{
 					if (a[j] == a[i]) break;
-					if (j == i) s++;
 				}
+				if (j == i) s++;
 			}
 		}
 		cout << "There are " << s << " prime numbers. ";
